@@ -1,0 +1,30 @@
+<ion-content padding id="page4" style="background:url(assets/img/9qY9c4XRFCfsc54mAXNz_grey20gradient.png) no-repeat center;">
+  <form id="login-form1">
+    <div class="spacer" style="width:300px;height:31px;" id="login-spacer6"></div>
+    <h1 id="login-heading4" style="color:#000000;text-align:center;">
+      Welcome!
+    </h1>
+    <div class="spacer" style="width:300px;height:30px;" id="login-spacer7"></div>
+    <ion-list id="login-list2">
+      <ion-item id="login-input1">
+        <ion-label>
+          Email
+        </ion-label>
+        <ion-input type="email" placeholder="" [(ngModel)]="email" name="email"></ion-input>
+      </ion-item>
+      <ion-item id="login-input2">
+        <ion-label>
+          Password
+        </ion-label>
+        <ion-input type="password" placeholder="" [(ngModel)]="password" name="password"></ion-input>
+      </ion-item>
+    </ion-list>
+    <div class="spacer" style="width:300px;height:24px;" id="login-spacer1"></div>
+    <button id="login-button1" ion-button color="positive" (click)="login()" block style="border-radius:25px 25px 25px 25px;">
+      Log in!
+    </button>
+    <button id="login-button2" ion-button clear color="positive" block on-click="goToSignup()">
+      Or create an account
+    </button>
+  </form>
+</ion-content>
