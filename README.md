@@ -5,4 +5,4 @@ Parler matches French and English language learners based on mutual interests. W
 
 Parler is build on the Ionic Framework using Angular JS and hosted on Google's Firebase
 
-DEMO [HERE](https://parler-b3c22.web.app/)
+**DEMO [HERE](https://parler-b3c22.web.app/)
