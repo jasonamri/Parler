@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Chat
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page13" style="display:grid; grid-template-columns: 25px 1fr 25px; grid-template-rows: 1fr 1fr 25px">
+
+    <ion-list [virtualScroll]="chats" class="chat-list" style="margin-bottom: 0px">
+
+        <ion-item *virtualItem="let chat" no-lines>
+          
+              <h2 *ngIf="(chat.mine==true)" item-right style="background-color: #488aff; color: #fff; padding: 10px 15px; border: 0.55px solid #fff; border-radius: 25px">
+                  {{chat.message}}
+              </h2>
+
+              <ion-avatar *ngIf="(chat.mine==false)" item-left style="margin-bottom: 5px; margin-top: auto">
+                <ion-img src="{{this.theirPhoto}}"></ion-img>
+              </ion-avatar>
+
+              <ion-avatar *ngIf="(chat.mine==true)" item-right style="margin-bottom: 5px; margin-top: auto">
+                <ion-img src="{{this.myPhoto}}"></ion-img>
+              </ion-avatar>
+
+              <h2 *ngIf="(chat.mine==false)" item-left style="background-color: #488aff; color: #fff; padding: 10px 15px; border: 0.55px solid #fff; border-radius: 25px">
+                  {{chat.message}}
+              </h2>
+
+        </ion-item>
+
+  </ion-list>
+  
+</ion-content>
+<ion-footer style="display:grid; border: 0.55px solid #c8c7cc; border-radius: 25px">
+  <form (ngSubmit)="sendMessage()" style="display: grid; grid-template-columns: 20px 1fr 1fr 1fr 1fr 5px;">
+    <ion-input type="text" [(ngModel)]="messageToSend" name="messageToSend" style="display: grid; grid-column: 2 / 5" placeholder="Message"></ion-input>
+
+    <button id="chat-button13" type="submit" style="display: grid; grid-column: 5 / 6; border-radius: 25px" ion-button color="positive" block>
+      Send
+    </button>
+  </form>
+</ion-footer>

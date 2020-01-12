@@ -1,0 +1,29 @@
+<ion-content padding style="background:url(assets/img/9qY9c4XRFCfsc54mAXNz_grey20gradient.png) no-repeat center;background-size:cover;" id="page6">
+  <div class="spacer" style="width:300px;height:29px;" id="language-spacer3"></div>
+  <h1 id="language-heading1" style="color:#000000;text-align:center;">
+    Bienvenue!
+  </h1>
+  <h1 id="language-heading2" style="color:#000000;text-align:center;">
+    Welcome!
+  </h1>
+  <div class="spacer" style="width:300px;height:64px;" id="language-spacer2"></div>
+  <div id="language-markdown3" style="text-align:center;" class="show-list-numbers-and-dots">
+    <p style="color:#000000;font-size:35px;">
+      Choisir votre langue maternelle Choose your native language
+    </p>
+  </div>
+  <div id="language-container6" style="display: grid; grid-template-columns: 2fr; grid-template-rows: 1fr; grid-gap: 15px; grid-template-areas: french english; justify-items: center; align-items: stretch;">
+    <div id="language-container4" style="display: grid; grid-area: french;">
+      <img src="assets/img/XZoXF3EsRDWv2kpenrn0_frenchflag.jpg" style="display:block;width:30%;height:auto;margin:auto;" />
+      <button id="language-button4" ion-button color="positive" style="border-radius:25px 25px 25px 25px;" on-click="goToWelcome()">
+        French
+      </button>
+    </div>
+    <div id="language-container3" style="display: grid; grid-area: english;">
+      <img src="assets/img/JU5tsv5vRF28WnAi45h7_americanflag.jpg" style="display:block;width:30%;height:auto;margin:auto;" />
+      <button id="language-button5" ion-button color="positive" style="border-radius:25px 25px 25px 25px;" on-click="goToWelcome()">
+        English
+      </button>
+    </div>
+  </div>
+</ion-content>

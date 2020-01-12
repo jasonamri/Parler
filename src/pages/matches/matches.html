@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Matches
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page11">
+  <ion-list id="matches-list5">
+    <ion-item  detail-push *ngFor="let match of matches" (click)="showProfile(match.id, match.uid)" color="none" id="matches-list-item6">
+      <ion-avatar item-left>
+        <img src="{{match.photoURL}}" />
+      </ion-avatar>
+      <h2>
+        {{match.name}}
+      </h2>
+    </ion-item>
+  </ion-list>
+  <ion-fab bottom right>
+    <button ion-fab (click)="refreshMatches()"><ion-icon *ngIf="(loading==false)" name="refresh"></ion-icon><ion-spinner color="light" *ngIf="(loading==true)" name="crescent"></ion-spinner></button>
+  </ion-fab>
+</ion-content>

@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Profile
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page10">
+  <ion-list id="profile-list6">
+    <ion-item color="none" id="profile-list-item8">
+      <ion-avatar item-left>
+        <img src="{{photoURL}}"/>
+      </ion-avatar>
+      <h2>
+        {{name}}
+      </h2>
+    </ion-item>
+  </ion-list>
+  <div id="profile-markdown9" class="show-list-numbers-and-dots">
+    <p style="color:#000000;">
+      <strong>
+        Bio:
+      </strong>
+      {{bio}}
+    </p>
+  </div>
+  <div class="spacer" style="height:100px;" id="profile-spacer10"></div>
+  <div id="profile-container7">
+    <button (click)="actOnMatch(2)" id="profile-button11" ion-button style="background-color: #f04141; border-radius:25px 25px 25px 25px;">
+      Reject
+    </button>
+    <button (click)="actOnMatch(1)" id="profile-button12" ion-button style="background-color: #10dc60; border-radius:25px 25px 25px 25px;">
+      Match
+    </button>
+  </div>
+</ion-content>
